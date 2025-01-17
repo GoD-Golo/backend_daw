@@ -1,0 +1,17 @@
+{
+    "name": "golo/hotel-daw-backend",
+    "authors": [
+        {
+            "name": "Gologan Alexandru",
+            "email": "dragosgologan17@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "league/oauth2-client": "^2.8",
+        "league/oauth2-google": "^4.0",
+        "vlucas/phpdotenv": "^5.6",
+        "google/auth": "^1.45",
+        "google/apiclient": "^2.18"
+    }
+}
