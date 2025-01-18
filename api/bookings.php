@@ -21,8 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     parse_str(file_get_contents("php://input"), $data);
 
+    $user_id = getCookie('user_id');
+    $user_role = getCookie('user_role');
+
+    if (!(is_numeric($user_id) && in_array($user_role, ['admin', 'client'], true)))  {
+        http_response_code(401); // Unauthorized
+        echo json_encode([
+            'success' => false,
+            'message' => 'Unauthorized: Please log in to access this resource.',
+        ]);
+        exit;
+    }
+
     $room_id = $data['room_id'];
-    $user_id = $data['user_id'];
     $start_date = $data['start_date'];
     $end_date = $data['end_date'];
     $status = $data['status'];
@@ -33,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(['message' => 'Invalid input: Missing required fields']);
         exit;
     }
+
 
     
         $stmt = $conn->prepare("INSERT INTO bookings (user_id, room_id, start_date, end_date, status) VALUES (:user_id, :room_id, :start_date, :end_date, :status)");
