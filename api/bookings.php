@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = getCookie('user_id');
     $user_role = getCookie('user_role');
 
-    if (!(is_numeric($user_id) && in_array($user_role, ['admin', 'client'], true)))  {
+    if (!($user_id && in_array($user_role, ['admin', 'client'], true)))  {
         http_response_code(401); // Unauthorized
         echo json_encode([
             'success' => false,
