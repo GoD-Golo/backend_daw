@@ -40,7 +40,7 @@ try {
         'domain' => '.frontend-daw.vercel.app', // Adjust to your domain (no leading dot)
         'secure' => true, // Set to true in production (requires HTTPS)
         'httponly' => true, // Prevent JavaScript access
-        'samesite' => 'Strict', // Adjust based on your needs ('Strict', 'Lax', or 'None')
+        'samesite' => 'None', // Adjust based on your needs ('Strict', 'Lax', or 'None')
     ];
 
     setcookie('user_id', $user['id'], $cookieOptions);
