@@ -33,6 +33,11 @@ if ($userId && in_array($userRole, ['admin', 'client'], true)) {
         'message' => empty($userId) || empty($userRole) || empty($userName) 
             ? 'Unauthorized: User not logged in.' 
             : 'Invalid user data. Please log in again.',
+        'user' => [
+            'id' => $userId,
+            'role' => $userRole,
+            'name' => $userName,
+        ],
     ];
 }
 
