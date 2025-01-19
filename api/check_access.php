@@ -17,7 +17,7 @@ $userName = getCookie('user_name');
 $response = [];
 
 // Check if required cookies are set
-if (is_numeric($userId) && in_array($userRole, ['admin', 'client'], true)) {
+if ($userId && in_array($userRole, ['admin', 'client'], true)) {
     // Valid cookies, construct response
     $response = [
         'success' => true,
