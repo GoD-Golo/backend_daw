@@ -13,6 +13,7 @@ $userName = getCookie('user_name');
 
 // error_log('Cookies in check_access.php: ' . print_r($_COOKIE, true));
 
+checkAccess(['admin', 'client']);
 
 $response = [];
 

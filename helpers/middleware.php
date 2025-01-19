@@ -4,14 +4,14 @@ function handleCors() {
     // header('Access-Control-Allow-Origin: http://localhost:3001');
     // header('Access-Control-Allow-Origin: https://frontend-daw.vercel.app');
     header('Access-Control-Allow-Origin: https://frontend-daw.vercel.app');
-    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Add other methods if needed
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type, Authorization');
     header('Access-Control-Allow-Credentials: true');
     header('Content-Type: application/json');
 
     // Handle preflight OPTIONS request
     if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-        http_response_code(204); // No Content
+        http_response_code(204); 
         exit;
     }
 }
