@@ -37,7 +37,7 @@ try {
     $cookieOptions = [
         'expires' => time() + 86400, // 1 day
         'path' => '/',
-        'domain' => '.frontend-daw.vercel.app', // Adjust to your domain (no leading dot)
+        'domain' => '.shark-app-twz3c.ondigitalocean.app', // Adjust to your domain (no leading dot)
         'secure' => true, // Set to true in production (requires HTTPS)
         'httponly' => true, // Prevent JavaScript access
         'samesite' => 'None', // Adjust based on your needs ('Strict', 'Lax', or 'None')
