@@ -11,10 +11,10 @@ session_destroy();
 $cookieOptions = [
     'expires' => time() + 86400, // 1 day
     'path' => '/',
-    'domain' => '.localhost', // Adjust to your domain (no leading dot)
-    'secure' => false, // Set to true in production (requires HTTPS)
-    'httponly' => true, // Prevent JavaScript access
-    'samesite' => 'Strict', // Adjust based on your needs ('Strict', 'Lax', or 'None')
+    'domain' => '.shark-app-twz3c.ondigitalocean.app', 
+    'secure' => true, 
+    'httponly' => true, 
+    'samesite' => 'None',
 ];
 
 setcookie('user_id', '', $cookieOptions);

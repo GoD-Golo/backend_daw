@@ -37,10 +37,10 @@ try {
     $cookieOptions = [
         'expires' => time() + 86400, // 1 day
         'path' => '/',
-        'domain' => '.shark-app-twz3c.ondigitalocean.app', // Adjust to your domain (no leading dot)
-        'secure' => true, // Set to true in production (requires HTTPS)
-        'httponly' => true, // Prevent JavaScript access
-        'samesite' => 'None', // Adjust based on your needs ('Strict', 'Lax', or 'None')
+        'domain' => '.shark-app-twz3c.ondigitalocean.app', 
+        'secure' => true, 
+        'httponly' => true, 
+        'samesite' => 'None', 
     ];
 
     setcookie('user_id', $user['id'], $cookieOptions);
