@@ -1,8 +1,8 @@
 <?php
-session_start();
 
 function handleCors() {
     // header('Access-Control-Allow-Origin: http://localhost:3001');
+    // header('Access-Control-Allow-Origin: https://frontend-daw.vercel.app');
     header('Access-Control-Allow-Origin: https://frontend-daw.vercel.app');
     header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Add other methods if needed
     header('Access-Control-Allow-Headers: Content-Type, Authorization');
@@ -15,6 +15,8 @@ function handleCors() {
         exit;
     }
 }
+
+session_start();
 
 // gets 'em cookies
 function getCookie(string $key, ?string $default = null): ?string {
